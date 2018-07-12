@@ -13,12 +13,12 @@
       <h1>Whomst I Am </h1>
       <div id= "caution" >CLASSIFIED INFORMATION PROPER CLEARENCE REQUIRED<div>
       <div> Sorry :( come back when you're a level three friend <div>
-      <div> Think you are a level three friend? Prove it. How long did I play soccer for?</div>
+      <div> Think you are a level three friend? Prove it. For how many years did I play soccer?</div>
       <input id="age" value="" />
       <button onclick="aboutMefunction()">Are you sure?</button>
       <p id="demo"></p>
-      <p id="info"> </p>
-      <p class="miniBio"> </p>
+      <p id="miniBio"></p>
+
       <script>
         function aboutMefunction() {
           var age, voteable;
@@ -26,15 +26,16 @@
           if (isNaN(age)) {
             voteable = "Input is not a number";
           }
-          else {
-            voteable = (age == 5) ? "Correct!" : "Sorry, you don't know me well enough. :(";
-            if (age == 5){
-              document.getElementById("info").innerHTML = "If you have made it this far, nice. So yeah, " +
-              "I've played soccer for 5 years, but I quit in 6th grade because it was too much running for me."
-            }
+          else if (age == 5){
+            voteable = "Correct!"
+            var bio = "If you have made it this far, nice. So yeah, I've played soccer for 5 years," +
+            " but I quit in 6th grade because it was too much running for me"
           }
-          document.getElementById("demo").innerHTML = voteable;
-
+          else {
+            voteable = "Sorry, you don't me know well enough. :("
+          }
+        document.getElementById("demo").innerHTML = voteable;
+        document.getElementById("miniBio").innerHTML = bio;
         }
       </script>
 
