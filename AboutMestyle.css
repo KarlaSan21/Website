@@ -1,0 +1,28 @@
+h1 {
+  font-family:serif;
+}
+body {
+  font-family: Didot, serif;
+  color: #9500C7;
+  background-color: #D5F2CB;
+}
+#gradient {
+  width: 225px;
+  border: 30px solid;
+  border-image: repeating-linear-gradient(45deg, #f33, #3bf, #f33 30px) 60;
+  padding: 20px;
+}
+
+#caution {
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+#demo{
+  color: green;
+}
+#info {
+  color: #D5F2CB;
+  font-weight: normal;
+  font-size: 14px;
+}
