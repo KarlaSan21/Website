@@ -1,1 +1,43 @@
-<h1> Hello World! </h1>
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="AboutMeStyle.css">
+  <head>
+  </head>
+  <body>
+    <center>
+      <h1>Intro (i guess)</h1>
+      <strong> Hello. </strong> My name Karla. I am a rising junior at Los Altos High School.
+      <div>I'm not sure what this website is going to be <em>yet,</em> but <em>maybe</em> it will turn out nice.</div>
+      <p>I know this doesn't look like much right now, but I think I can turn it into something.
+      <div id="gradient"><img src="juice.jpeg"></div>
+      <h1>Whomst I Am </h1>
+      <div id= "caution" >CLASSIFIED INFORMATION PROPER CLEARENCE REQUIRED<div>
+      <div> Sorry :( come back when you're a level three friend <div>
+      <div> Think you are a level three friend? Prove it. How long did I play soccer for?</div>
+      <input id="age" value="" />
+      <button onclick="aboutMefunction()">Are you sure?</button>
+      <p id="demo"></p>
+      <p id="info" style="display:none"> If you have made it this far, nice. So yeah, I've played soccer for 5 years, but I quit in 6th grade
+      because it was too much running for me.</p>
+      <p class="miniBio"> 
+      <script>
+        function aboutMefunction() {
+          var age, voteable;
+          age = Number(document.getElementById("age").value);
+          if (isNaN(age)) {
+            voteable = "Input is not a number";
+          }
+          else {
+            voteable = (age == 5) ? "Correct!" : "Sorry, you don't know me well enough. :(";
+            if (age == 5){
+              document.getElementById("info").style.display = "block";
+            }
+          }
+          document.getElementById("demo").innerHTML = voteable;
+
+        }
+      </script>
+
+    </center>
+  </body>
+</html>
