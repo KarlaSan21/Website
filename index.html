@@ -17,8 +17,7 @@
       <input id="age" value="" />
       <button onclick="aboutMefunction()">Are you sure?</button>
       <p id="demo"></p>
-      <p id="info" style="display:none"> If you have made it this far, nice. So yeah, I've played soccer for 5 years, but I quit in 6th grade
-      because it was too much running for me.</p>
+      <p id="info"> </p>
       <p class="miniBio"> </p>
       <script>
         function aboutMefunction() {
@@ -30,7 +29,8 @@
           else {
             voteable = (age == 5) ? "Correct!" : "Sorry, you don't know me well enough. :(";
             if (age == 5){
-              document.getElementById("info").style.display = "block";
+              document.getElementById("info").innerHTML = "If you have made it this far, nice. So yeah, I've played soccer for 5 years," +
+               "but I quit in 6th grade because it was too much running for me."
             }
           }
           document.getElementById("demo").innerHTML = voteable;
